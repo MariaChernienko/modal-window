@@ -1,2 +1,71 @@
-h1 {
-  color: orange; }
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+.open-modal {
+  display: block;
+  padding: 8px 12px;
+  margin: 30px auto;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px sold #eee;
+  background-color: #fff;
+  cursor: pointer; }
+
+.modal-container {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7); }
+  .modal-container.active {
+    display: block; }
+  .modal-container .modal {
+    display: block;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 50px 50px 50px;
+    box-sizing: border-box;
+    margin: 50px auto; }
+    .modal-container .modal__close {
+      display: block;
+      height: 20px;
+      cursor: pointer; }
+    .modal-container .modal__warning {
+      display: block;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto; }
+    .modal-container .modal__title {
+      margin-top: 30px;
+      font-size: 28px;
+      font-family: 'Lato', sans-serif;
+      text-align: center; }
+    .modal-container .modal__btn {
+      display: inline-block;
+      margin-top: 40px;
+      margin-left: 30px;
+      padding: 10px 70px;
+      border: 2px solid #999;
+      border-radius: 5px;
+      color: #999;
+      font-family: 'Lato', sans-serif;
+      font-size: 20px;
+      transition: all 0.1s linear; }
+      .modal-container .modal__btn.red {
+        background-color: #ff3b30;
+        border: 2px solid #ff3b30;
+        color: #fff; }
+        .modal-container .modal__btn.red:hover {
+          background-color: #ff574f;
+          border: 2px solid #ff574f; }
+      .modal-container .modal__btn:hover {
+        border: 2px solid #807d7d; }

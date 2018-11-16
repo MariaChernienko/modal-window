@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>Hello, modal window!!</h1>
+      <input type="button" value="run popup" class="open-modal" data-target="openModal">
+
+      <div class="modal-container">
+        <div class="modal">
+          <img src="./images/icon-popup-close.svg" alt="close" class="modal__close" data-target="closeModal">
+          <img src="./images/icon-warning_notify-red.svg" alt="warning" class="modal__warning">
+          <p class="modal__title">Are you sure you want to uninstall the Shazam app</p>
+          <a href="#" class="modal__btn" data-target="closeModal">Cancel</a>
+          <a href="#" class="modal__btn red">Uninstall</a>
+        </div>
+        
+      </div>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
