@@ -14,8 +14,7 @@
   background-color: #fff;
   cursor: pointer;
 }
-.modal-container {
-  display: none;
+.overlay {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -23,66 +22,71 @@
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 0;
   background: rgba(0, 0, 0, 0.7);
-
+}
+.modal {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px 50px 50px 50px;
+  box-sizing: border-box;
   &.active {
     display: block;
   }
 
-  .modal {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    // display: block;
-    max-width: 600px;
-    background: #fff;
+  &__close {
+    background: url("../images/icon-popup-close.svg") no-repeat center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  &__warning {
+    display: block;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    margin-top: 30px;
+    font-size: 28px;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+  }
+  &__btn {
+    display: inline-block;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 30px;
+    padding: 10px 70px;
+    border: 2px solid #999;
     border-radius: 5px;
-    padding: 20px 50px 50px 50px;
-    box-sizing: border-box;
-    // margin: 50px auto;
-
-    &__close {
-      display: block;
-      height: 20px;
-      cursor: pointer;
+    color: #999;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    transition: all 0.1s linear;
+    &.red {
+      background-color: rgb(255, 59, 48);
+      border: 2px solid rgb(255, 59, 48);
+      color: #fff;
+      &:hover {
+        background-color: rgb(255, 87, 79);
+        border: 2px solid rgb(255, 87, 79);
+      }
     }
-    &__warning {
+    &.center {
       display: block;
-      height: 150px;
+      width: 100px;
       margin-left: auto;
       margin-right: auto;
     }
-    &__title {
-      margin-top: 30px;
-      font-size: 28px;
-      font-family: "Lato", sans-serif;
-      text-align: center;
-    }
-    &__btn {
-      display: inline-block;
-      margin-top: 40px;
-      margin-left: 30px;
-      padding: 10px 70px;
-      border: 2px solid #999;
-      border-radius: 5px;
-      color: #999;
-      font-family: "Lato", sans-serif;
-      font-size: 20px;
-      transition: all 0.1s linear;
-      &.red {
-        background-color: rgb(255, 59, 48);
-        border: 2px solid rgb(255, 59, 48);
-        color: #fff;
-        &:hover {
-          background-color: rgb(255, 87, 79);
-          border: 2px solid rgb(255, 87, 79);
-        }
-      }
-      &:hover {
-        border: 2px solid rgb(128, 125, 125);
-      }
+    &:hover {
+      border: 2px solid rgb(128, 125, 125);
     }
   }
 }

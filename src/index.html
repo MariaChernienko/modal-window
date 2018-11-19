@@ -21,48 +21,30 @@
       data-target="openSecondModal"
     />
 
-    <div class="modal-container" data-target="firstWindow">
-      <div class="modal" data-target="modalFirstWindow">
-        <img
-          src="./images/icon-popup-close.svg"
-          alt="close"
-          class="modal__close"
-          data-target="closeFirstModal"
-        />
-        <img
-          src="./images/icon-warning_notify-red.svg"
-          alt="warning"
-          class="modal__warning"
-        />
-        <p class="modal__title">
-          Are you sure you want to uninstall the Shazam app
-        </p>
-        <a href="#" class="modal__btn" data-target="closeFirstModal">Cancel</a>
-        <a href="#" class="modal__btn red" data-target="showAlert">Uninstall</a>
-      </div>
+    <div class="modal" data-window="modalFirstWindow">
+      <img
+        src="./images/icon-warning_notify-red.svg"
+        alt="warning"
+        class="modal__warning"
+      />
+      <p class="modal__title">
+        Are you sure you want to uninstall the Shazam app
+      </p>
+      <a href="#" class="modal__btn" data-target="closeModal">Cancel</a>
+      <a href="#" class="modal__btn red" data-target="showAlert">Uninstall</a>
     </div>
 
-    <div class="modal-container" data-target="secondWindow">
-      <div class="modal" data-target="modalFirstWindow">
-        <img
-          src="./images/icon-popup-close.svg"
-          alt="close"
-          class="modal__close"
-          data-target="closeSecondModal"
-        />
-        <img
-          src="./images/icon-warning_notify-red.svg"
-          alt="warning"
-          class="modal__warning"
-        />
-        <p class="modal__title">
-          Second window you are sure you want to uninstall the Shazam app
-        </p>
-        <a href="#" class="modal__btn" data-target="closeSecondModal">Cancel</a>
-        <a href="#" class="modal__btn red" data-target="showAlert">Uninstall</a>
-      </div>
+    <div class="modal" data-window="modalSecondWindow">
+      <img
+        src="./images/icon-warning_notify-red.svg"
+        alt="warning"
+        class="modal__warning"
+      />
+      <p class="modal__title">
+        Second window you are sure you want to uninstall the Shazam app
+      </p>
+      <a href="#" class="modal__btn center" data-target="closeModal">Cancel</a>
     </div>
-
     <script src="./js/main.js"></script>
   </body>
 </html>
