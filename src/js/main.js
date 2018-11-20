@@ -5,7 +5,7 @@
   const modalSecondWindow = document.querySelector(
     '[data-window="modalSecondWindow"]'
   );
-  const allBtns = document.querySelectorAll('[data-target]');
+  const allBtns = document.querySelectorAll('[data-action]');
 
   const closeModal = function closeModal(element) {
     document.querySelector('.overlay').remove();
@@ -37,7 +37,6 @@
     modals.forEach((element) => {
       const close = document.createElement('div');
       close.classList.add('modal__close');
-      close.setAttribute('data-target', 'close');
       element.insertBefore(close, element.firstChild);
       close.addEventListener('click', () => {
         const modals = document.querySelectorAll('.modal');
@@ -51,7 +50,7 @@
 
   allBtns.forEach((element) => {
     element.addEventListener('click', (event) => {
-      const targetName = element.dataset.target;
+      const targetName = element.dataset.action;
       if (targetName == 'openFirstModal') {
         createOverlay();
         createCloseBtn();
