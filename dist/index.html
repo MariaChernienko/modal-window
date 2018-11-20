@@ -12,13 +12,13 @@
       type="button"
       value="run popup"
       class="open-modal"
-      data-target="openFirstModal"
+      data-action="openFirstModal"
     />
     <input
       type="button"
       value="run popup 2"
       class="open-modal"
-      data-target="openSecondModal"
+      data-action="openSecondModal"
     />
 
     <div class="modal" data-window="modalFirstWindow">
@@ -30,8 +30,8 @@
       <p class="modal__title">
         Are you sure you want to uninstall the Shazam app
       </p>
-      <a href="#" class="modal__btn" data-target="closeModal">Cancel</a>
-      <a href="#" class="modal__btn red" data-target="showAlert">Uninstall</a>
+      <a href="#" class="modal__btn" data-action="closeModal">Cancel</a>
+      <a href="#" class="modal__btn red" data-action="showAlert">Uninstall</a>
     </div>
 
     <div class="modal" data-window="modalSecondWindow">
@@ -43,8 +43,10 @@
       <p class="modal__title">
         Second window you are sure you want to uninstall the Shazam app
       </p>
-      <a href="#" class="modal__btn center" data-target="closeModal">Cancel</a>
+      <a href="#" class="modal__btn center" data-action="closeModal">Cancel</a>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
