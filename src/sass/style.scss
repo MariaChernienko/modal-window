@@ -36,7 +36,9 @@
   border-radius: 5px;
   padding: 20px 50px 50px 50px;
   box-sizing: border-box;
+  transition: all 1s linear;
   &.active {
+    // transition: all 1s linear;
     display: block;
   }
 

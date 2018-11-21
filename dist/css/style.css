@@ -35,7 +35,8 @@
   background: #fff;
   border-radius: 5px;
   padding: 20px 50px 50px 50px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: all 1s linear; }
   .modal.active {
     display: block; }
   .modal__close {
