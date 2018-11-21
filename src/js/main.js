@@ -1,1 +1,1 @@
-$('.modal').modal();
+// let myModal = $('.modal').modal(2);

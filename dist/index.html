@@ -12,16 +12,16 @@
       type="button"
       value="run popup"
       class="open-modal"
-      data-action="openFirstModal"
+      data-action="FirstModal"
     />
     <input
       type="button"
       value="run popup 2"
       class="open-modal"
-      data-action="openSecondModal"
+      data-action="SecondModal"
     />
 
-    <div class="modal" data-window="modalFirstWindow">
+    <div class="modal" data-window="FirstModal">
       <img
         src="./images/icon-warning_notify-red.svg"
         alt="warning"
@@ -30,11 +30,11 @@
       <p class="modal__title">
         Are you sure you want to uninstall the Shazam app
       </p>
-      <a href="#" class="modal__btn" data-action="closeModal">Cancel</a>
-      <a href="#" class="modal__btn red" data-action="showAlert">Uninstall</a>
+      <a href="#" class="modal__btn close">Cancel</a>
+      <a href="#" class="modal__btn red">Uninstall</a>
     </div>
 
-    <div class="modal" data-window="modalSecondWindow">
+    <div class="modal" data-window="SecondModal">
       <img
         src="./images/icon-warning_notify-red.svg"
         alt="warning"
@@ -43,7 +43,7 @@
       <p class="modal__title">
         Second window you are sure you want to uninstall the Shazam app
       </p>
-      <a href="#" class="modal__btn center" data-action="closeModal">Cancel</a>
+      <a href="#" class="modal__btn center close">Cancel</a>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>

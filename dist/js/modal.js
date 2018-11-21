@@ -1,10 +1,5 @@
-$.fn.modal = function modal() {
-  const modalFirstWindow = document.querySelector(
-    '[data-window="modalFirstWindow"]'
-  );
-  const modalSecondWindow = document.querySelector(
-    '[data-window="modalSecondWindow"]'
-  );
+$.fn.modal = function modal(options) {
+  console.log(options);
   const allBtns = document.querySelectorAll('[data-action]');
 
   const closeModal = function closeModal(element) {
@@ -51,22 +46,17 @@ $.fn.modal = function modal() {
   allBtns.forEach((element) => {
     element.addEventListener('click', (event) => {
       const targetName = element.dataset.action;
-      if (targetName == 'openFirstModal') {
-        createOverlay();
-        createCloseBtn();
-        modalFirstWindow.classList.add('active');
-      } else if (targetName == 'openSecondModal') {
-        createOverlay();
-        createCloseBtn();
-        modalSecondWindow.classList.add('active');
-      } else if (targetName == 'closeModal') {
-        closeModal(element);
-      } else if (targetName == 'showAlert') {
-        closeModal(element);
-        setTimeout(() => {
-          alert('Hello');
-        }, 100);
-      }
+      const targetModal = document.querySelector(`[data-window=${targetName}]`);
+      createOverlay();
+      createCloseBtn();
+      targetModal.classList.add('active');
     });
   });
-}
+  const close = document.querySelectorAll('.close');
+  close.forEach(element => {
+    element.addEventListener('click', () => {
+      closeModal(element);
+    });
+  });
+
+};
