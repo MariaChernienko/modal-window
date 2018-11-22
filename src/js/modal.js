@@ -1,7 +1,5 @@
-$.fn.modal = function modal(options) {
-  console.log(options);
+$.fn.modal = function modal() {
   const allBtns = document.querySelectorAll('[data-action]');
-
   const closeModal = function closeModal(element) {
     document.querySelector('.overlay').remove();
     element.parentElement.classList.remove('active');
@@ -42,7 +40,6 @@ $.fn.modal = function modal(options) {
       });
     });
   };
-
   allBtns.forEach((element) => {
     element.addEventListener('click', (event) => {
       const targetName = element.dataset.action;
@@ -53,10 +50,17 @@ $.fn.modal = function modal(options) {
     });
   });
   const close = document.querySelectorAll('.close');
-  close.forEach(element => {
+  close.forEach((element) => {
     element.addEventListener('click', () => {
       closeModal(element);
     });
   });
-
+  const alertBtn = document.querySelector('.alert');
+  alertBtn.addEventListener('click', () => {
+    document.querySelector('.overlay').remove();
+    alertBtn.parentElement.classList.remove('active');
+    setTimeout(() => {
+      alert('hola');
+    }, 100);
+  });
 };
